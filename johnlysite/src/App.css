@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.techs {
+  color: #a6a6a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.techs-container {
+  display: flex;
+
+  gap: 40px
+}
+
+@media only screen and (max-width: 600px) {
+  .techs-container {
+    display: flex !important;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  img {
+    display: none;
+  }
+}
