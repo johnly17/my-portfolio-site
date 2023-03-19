@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Box, Typography, Divider, Container } from "@mui/material";
+import { Box, Typography, Divider, Container, Link } from "@mui/material";
+
+import video1 from "./videos/Soccer Connect - 19 March 2023.mp4"
 
 import * as React from "react";
 import Card from "@mui/material/Card";
@@ -68,30 +70,34 @@ function Projects() {
         <ChevronRightRounded sx={{ color: "#FFBF00 !important" }} />
         Projects
       </Typography>
-      <Container style={{ display: "flex", gap: "1rem" }}>
+      <Container className="projects-container" style={{ display: "flex", gap: "1rem" }}>
         <Card
           sx={{
             maxWidth: 345,
-            height: expanded ? 600 : 450,
+            height: expanded ? 680 : 450,
             background: "inherit",
             border: "2px solid #177878",
             padding: '10px'
           }}
         >
-          <CardHeader title="Soccer Connect" sx={{ color: "#a6a6a6" }} />
+          <CardHeader title="Soccer Connect" sx={{ color: "white" }} />
           <CardMedia
-            component="img"
+            component="iframe"
             height="194"
-            image="/static/images/cards/paella.jpg"
-            alt="Paella dish"
+            image={video1}
           />
           <CardContent>
+            <Typography variant="h5" color="#FFBF00">
+                Purpose:
+            </Typography>
             <Typography
               variant="body2"
               color="text.secondary"
-              sx={{ color: "#a6a6a6" }}
+              sx={{ color: "#a6a6a6", overflow: 'hidden' }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet. Nulla facilisi.
+              A full-stack application that allows soccer players in the United States to host and sign up for pick up matches near them.
+              <br />
+            <Link href='https://soccer-connect.onrender.com/' target='_blank' underline='none'>Live Demo</Link>
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -101,11 +107,15 @@ function Projects() {
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>Tech:</Typography>
-              <Typography paragraph>React.js, Ruby</Typography>
-              <Typography paragraph></Typography>
-              <Typography paragraph></Typography>
-              <Typography></Typography>
+              <Typography paragraph color='white'>Tech:</Typography>
+              <Typography sx={{fontSize: '.8rem'}} color='#177878' gutterBottom>React.js, Ruby, Google Maps API, Material UI, PostgreSQL, BCrypt Auth</Typography>
+              <Typography color={'white'} gutterBottom>In Progress:</Typography>
+                <ul style={{color: '#177878', fontSize: '.8rem', marginLeft: '.7rem'}}>
+                    <li>Logout function can be buggy</li>
+                    <li>Implement search autofil</li>
+                    <li>Add new event validations, correct date and time format, valid address</li>
+                    <li>Allow users to upload images for profile pictures</li>
+                </ul>
             </CardContent>
           </Collapse>
         </Card>
@@ -118,7 +128,7 @@ function Projects() {
             padding: "10px",
           }}
         >
-          <CardHeader title="To-Do List" sx={{ color: "#a6a6a6" }} />
+          <CardHeader title="To-Do List" sx={{ color: "white" }} />
           <CardMedia
             component="img"
             height="194"
@@ -126,12 +136,15 @@ function Projects() {
             alt="Paella dish"
           />
           <CardContent>
+          <Typography variant="h5" color="#FFBF00">
+                Purpose:
+            </Typography>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ color: "#a6a6a6" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet. Nulla facilisi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -166,12 +179,15 @@ function Projects() {
             alt="Paella dish"
           />
           <CardContent>
+          <Typography variant="h5" color="#FFBF00">
+                Purpose:
+            </Typography>
             <Typography
               variant="body2"
               color="text.secondary"
               sx={{ color: "#a6a6a6" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>

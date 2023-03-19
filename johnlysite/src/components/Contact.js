@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Box, Typography, Divider, Container } from "@mui/material";
+import { Box, Typography, Divider, Container, Link } from "@mui/material";
 
 function Contact() {
   const [showContact, setShowContact] = useState(false);
@@ -25,7 +25,7 @@ function Contact() {
         display: "flex",
         flexDirection: "column",
         alignItems: "left",
-        minHeight: "80vh",
+        minHeight: "100vh",
         padding: "2rem",
         backgroundColor: "#0e0f1f",
         opacity: showContact ? "1" : "0",
@@ -40,7 +40,7 @@ function Contact() {
         Let's get in touch!
       </Typography>
       <Container>
-        
+
       </Container>
     </Box>
   );

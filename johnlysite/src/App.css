@@ -57,6 +57,9 @@
     row-gap: 10px;
     padding-left: 10px;
   }
+  .projects-container {
+    display: grid !important;
+  }
 }
 
 @media (max-width: 768px) {
