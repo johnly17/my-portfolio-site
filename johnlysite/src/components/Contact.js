@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Box, Typography, Divider, Container, Link } from "@mui/material";
+import { Box, Typography, Divider, Container } from "@mui/material";
 
 function Contact() {
   const [showContact, setShowContact] = useState(false);

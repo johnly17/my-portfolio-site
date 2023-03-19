@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,8 +16,6 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
-
-  const aboutRef = useRef(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
