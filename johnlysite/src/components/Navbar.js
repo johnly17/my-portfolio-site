@@ -1,4 +1,4 @@
-import React, { useState, useEffect,  useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import AppBar from "@mui/material/AppBar";
@@ -11,13 +11,13 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
 
-  const aboutRef= useRef(null)
+  const aboutRef = useRef(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -41,17 +41,28 @@ function Navbar() {
       position="fixed"
       sx={{ backgroundColor: "#0e0f1f", color: "#a6a6a6" }}
     >
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between", margin: '0 2rem' }}>
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "0 2rem",
+        }}
+      >
         <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
           <Link
-          activeClass="active"
-          to="/"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={700}
+            activeClass="active"
+            to="/"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={700}
           >
-            <Typography variant="h5" sx={{color: '#FFBF00', cursor: "pointer"}}>john ly</Typography>
+            <Typography
+              variant="h5"
+              sx={{ color: "#FFBF00", cursor: "pointer" }}
+            >
+              john ly
+            </Typography>
           </Link>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
@@ -67,94 +78,102 @@ function Navbar() {
             </IconButton>
           ) : (
             <>
-            <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={700}
-            >
-              <Button
-                color="inherit"
-                sx={{ textTransform: "lowercase",
-                position: 'relative',
-                overflow: 'hidden',
-                '&::before': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: 0,
-                  height: '2px',
-                  backgroundColor: '#FFBF00',
-                  transition: 'width 0.3s ease-in-out',
-                },
-                '&:hover::before': {
-                  width: '90%',
-                }, fontSize: "18px", paddingRight: '1.5rem' }}
-              >
-                <ChevronRightRoundedIcon sx={{color: '#FFBF00'}} />
-                About
-              </Button>
-            </Link>
-            <Link
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            duration={700}
-            >
-              <Button
-                color="inherit"
-                sx={{ textTransform: "lowercase",
-                position: 'relative',
-                overflow: 'hidden',
-                '&::before': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: 0,
-                  height: '2px',
-                  backgroundColor: '#FFBF00',
-                  transition: 'width 0.3s ease-in-out',
-                },
-                '&:hover::before': {
-                  width: '90%',
-                }, fontSize: "18px", paddingRight: '1.5rem' }}
-              >
-                <ChevronRightRoundedIcon sx={{color: '#FFBF00'}} />
-                Projects
-              </Button>
-            </Link>
-              <Button
-                color="inherit"
-                sx={{ textTransform: "lowercase",
-                position: 'relative',
-                overflow: 'hidden',
-                '&::before': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: 0,
-                  height: '2px',
-                  backgroundColor: '#FFBF00',
-                  transition: 'width 0.4s ease-in-out',
-                },
-                '&:hover::before': {
-                  width: '90%',
-                }, fontSize: "18px", paddingRight: '1.5rem' }}
-              >
-                <Link
-                to='contact'
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
                 smooth={true}
                 duration={700}
+              >
+                <Button
+                  color="inherit"
+                  sx={{
+                    textTransform: "lowercase",
+                    position: "relative",
+                    overflow: "hidden",
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      width: 0,
+                      height: "2px",
+                      backgroundColor: "#FFBF00",
+                      transition: "width 0.3s ease-in-out",
+                    },
+                    "&:hover::before": {
+                      width: "90%",
+                    },
+                    fontSize: "18px",
+                    paddingRight: "1.5rem",
+                  }}
                 >
-                </Link>
-                <ChevronRightRoundedIcon sx={{color: '#FFBF00'}} />
-                Contact
-              </Button>
+                  <ChevronRightRoundedIcon sx={{ color: "#FFBF00" }} />
+                  About
+                </Button>
+              </Link>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={700}
+              >
+                <Button
+                  color="inherit"
+                  sx={{
+                    textTransform: "lowercase",
+                    position: "relative",
+                    overflow: "hidden",
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      width: 0,
+                      height: "2px",
+                      backgroundColor: "#FFBF00",
+                      transition: "width 0.3s ease-in-out",
+                    },
+                    "&:hover::before": {
+                      width: "90%",
+                    },
+                    fontSize: "18px",
+                    paddingRight: "1.5rem",
+                  }}
+                >
+                  <ChevronRightRoundedIcon sx={{ color: "#FFBF00" }} />
+                  Projects
+                </Button>
+              </Link>
+              <Link to="contact" smooth={true} duration={700}>
+                <Button
+                  color="inherit"
+                  sx={{
+                    textTransform: "lowercase",
+                    position: "relative",
+                    overflow: "hidden",
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      width: 0,
+                      height: "2px",
+                      backgroundColor: "#FFBF00",
+                      transition: "width 0.4s ease-in-out",
+                    },
+                    "&:hover::before": {
+                      width: "90%",
+                    },
+                    fontSize: "18px",
+                    paddingRight: "1.5rem",
+                  }}
+                >
+                  <ChevronRightRoundedIcon sx={{ color: "#FFBF00" }} />
+                  Contact
+                </Button>
+              </Link>
               <Button
                 color="inherit"
                 sx={{
@@ -162,9 +181,9 @@ function Navbar() {
                   borderRadius: "10px",
                   textTransform: "lowercase",
                   fontSize: "18px",
-                  '&:hover': {
-                    backgroundColor: '#a6a6a6',
-                    color: 'black',
+                  "&:hover": {
+                    backgroundColor: "#a6a6a6",
+                    color: "black",
                   },
                 }}
               >
@@ -177,10 +196,26 @@ function Navbar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}><Link to='/' smooth={true} duration={700}>Home</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to='about' smooth={true} duration={700}>About</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to='projects' smooth={true} duration={700}>Projects</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to='contact' smooth={true} duration={700}>Contact</Link></MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="/" smooth={true} duration={700}>
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="about" smooth={true} duration={700}>
+                About
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="projects" smooth={true} duration={700}>
+                Projects
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link to="contact" smooth={true} duration={700}>
+                Contact
+              </Link>
+            </MenuItem>
           </Menu>
         </Box>
       </Toolbar>

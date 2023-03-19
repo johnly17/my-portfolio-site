@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Landing id='/' />
-      <About id='about'/>
-      <Projects id='projects'/>
-      <Contact id='contact' />
+      <Landing />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

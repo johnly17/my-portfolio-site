@@ -3,7 +3,7 @@ import { Box, Typography, Divider } from "@mui/material";
 
 import { ChevronRightRounded } from "@mui/icons-material";
 
-function AboutMe() {
+function About() {
   const [showAboutMe, setShowAboutMe] = useState(false);
 
   useEffect(() => {
@@ -93,4 +93,4 @@ function AboutMe() {
   );
 };
 
-export default AboutMe;
+export default About;

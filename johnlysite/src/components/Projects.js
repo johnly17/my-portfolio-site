@@ -14,16 +14,21 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ChevronRightRounded } from "@mui/icons-material";
 
 function Projects() {
-  const [showAboutMe, setShowAboutMe] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [expanded2, setExpanded2] = useState(false);
-
+  const [expanded3, setExpanded3] = useState(false);
+  
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   const handleExpand2 = () => {
     setExpanded2(!expanded2);
+  };
+
+  const handleExpand3 = () => {
+    setExpanded3(!expanded3);
   };
 
   useEffect(() => {
@@ -33,9 +38,9 @@ function Projects() {
 
   const handleScroll = () => {
     if (window.scrollY > 1200) {
-      setShowAboutMe(true);
+      setShowProjects(true);
     } else {
-      setShowAboutMe(false);
+        setShowProjects(false);
     }
   };
 
@@ -51,7 +56,7 @@ function Projects() {
         minHeight: "100vh",
         padding: "2rem",
         backgroundColor: "#0e0f1f",
-        opacity: showAboutMe ? "1" : "0",
+        opacity: showProjects ? "1" : "0",
         transition: "opacity 0.5s ease-in-out",
         marginLeft: "3rem",
       }}
@@ -86,9 +91,7 @@ function Projects() {
               color="text.secondary"
               sx={{ color: "#a6a6a6" }}
             >
-              This impressive paella is a perfect party dish and a fun meal to
-              cook together with your guests. Add 1 cup of frozen peas along
-              with the mussels, if you like.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet. Nulla facilisi.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -128,9 +131,7 @@ function Projects() {
               color="text.secondary"
               sx={{ color: "#a6a6a6" }}
             >
-              This impressive paella is a perfect party dish and a fun meal to
-              cook together with your guests. Add 1 cup of frozen peas along
-              with the mussels, if you like.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet. Nulla facilisi.
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -139,6 +140,46 @@ function Projects() {
             </IconButton>
           </CardActions>
           <Collapse in={expanded2} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography paragraph>Tech:</Typography>
+              <Typography paragraph>Chicken</Typography>
+              <Typography paragraph></Typography>
+              <Typography paragraph></Typography>
+              <Typography></Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
+        <Card
+          sx={{
+            maxWidth: 345,
+            height: expanded3 ? 600 : 450,
+            background: "inherit",
+            border: "2px solid #177878",
+            padding: "10px",
+          }}
+        >
+          <CardHeader title="Show Finder" sx={{ color: "#a6a6a6" }} />
+          <CardMedia
+            component="img"
+            height="194"
+            image="/static/images/cards/paella.jpg"
+            alt="Paella dish"
+          />
+          <CardContent>
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              sx={{ color: "#a6a6a6" }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at congue erat. Sed cursus, ligula ut rhoncus iaculis, metus justo tempor mauris, non auctor erat mi at lacus. Etiam vehicula augue vel justo feugiat, commodo placerat massa aliquet.
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton onClick={handleExpand3} id="card2-expand">
+              <ExpandMoreIcon sx={{ color: "#FFBF00 !important" }} />
+            </IconButton>
+          </CardActions>
+          <Collapse in={expanded3} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph>Tech:</Typography>
               <Typography paragraph>Chicken</Typography>
