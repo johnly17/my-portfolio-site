@@ -65,8 +65,9 @@ function Contact() {
           </Link>
         </div>
       </div>
-      <div className="form-container" method="post">
-        <form className="contact">
+      <div className="form-container">
+        <form name="contact" className="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <label htmlFor="name">Name:</label>
           <br />
           <input type="text" id="name" name="name" required /> 
