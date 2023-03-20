@@ -3,62 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import image from "./images/image.jpeg"
 
-// const About = () => {
-//   return (
-//     <Box
-//       sx={{
-//         display: "flex",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         minHeight: "100vh",
-//         padding: "0 2rem",
-//         maxWidth: "600px",
-//         margin: "0 auto",
-//         textAlign: "left",
-//         color: "#a6a6a6",
-//       }}
-//     >
-//       <Typography variant="h4" sx={{ color: "#FFBF00" }} gutterBottom>
-//         Hi, my name is
-//       </Typography>
-//       <Typography variant="h2" sx={{ color: "white" }} gutterBottom>
-//         John Ly
-//       </Typography>
-//       <Typography variant="body1" gutterBottom>
-//         A software engineer with a passion for creating beautful and scalable
-//         digital experiences.
-//       </Typography>
-//       <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-//         <Link
-//           href="https://www.linkedin.com/in/john-ly-906013183/"
-//           color="inherit"
-//           target="_blank"
-//         >
-//           <LinkedInIcon />
-//         </Link>
-//         <Link
-//           href="https://github.com/johnly17"
-//           color="inherit"
-//           target="_blank"
-//         >
-//           <GitHubIcon />
-//         </Link>
-//         {/* still need href */}
-//         <Link component='button' color='inherit' underline='hover' sx={{
-//               border: "2px solid #a6a6a6",
-//               borderRadius: "13px",
-//               padding: "6px",
-//               fontSize: "11px",
-//             }}>
-//             resume
-//         </Link>
-//       </Box>
-//       <Box>
-//       <img src={image} alt='profile pic'/>
-//       </Box>
-//     </Box>
-//   );
-// };
+
 function Landing() {
   return (
     <Box

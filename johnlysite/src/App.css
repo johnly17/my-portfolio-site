@@ -49,29 +49,45 @@
   gap: 40px
 }
 
-.contact-container span {
+.contact-info {
   color: white;
-  width: 50%;
-  margin: 0 auto 3.5rem auto;
 }
 
-.form-container {
+.contact-info p {
+  color: white;
+  width: 50%;
+  margin: 0 auto 0.5rem auto;
+  font-size: 1.3rem;
+}
+
+.contact {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 0 auto;
 }
 
-.form-container input {
+.contact input {
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.form-container label {
+.contact label {
   color: #177878;
   margin-top: 10px;
+}
+
+.contact textarea {
+  margin-top: 10px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -95,14 +111,14 @@
   .projects-container {
     display: grid !important;
   }
-  .contact-container span {
+  .contact-info p {
     width: 90%;
   }
   .form-container input {
     margin: 0 auto;
   }
   .form-container textarea {
-    
+
   }
   .form-container button {
     width: 60% !important;

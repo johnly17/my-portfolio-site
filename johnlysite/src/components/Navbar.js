@@ -78,6 +78,40 @@ function Navbar() {
             <>
               <Link
                 activeClass="active"
+                to="/"
+                spy={true}
+                smooth={true}
+                duration={700}
+              >
+                <Button
+                  color="inherit"
+                  sx={{
+                    textTransform: "lowercase",
+                    position: "relative",
+                    overflow: "hidden",
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      width: 0,
+                      height: "2px",
+                      backgroundColor: "#FFBF00",
+                      transition: "width 0.3s ease-in-out",
+                    },
+                    "&:hover::before": {
+                      width: "90%",
+                    },
+                    fontSize: "18px",
+                    paddingRight: "1.5rem",
+                  }}
+                >
+                  <ChevronRightRoundedIcon sx={{ color: "#FFBF00" }} />
+                  Home
+                </Button>
+              </Link>
+              <Link
+                activeClass="active"
                 to="about"
                 spy={true}
                 smooth={true}
