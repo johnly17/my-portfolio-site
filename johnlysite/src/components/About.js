@@ -47,13 +47,7 @@ function About() {
         sx={{ width: "70%" }}
         gutterBottom
       >
-        I am a software engineer with experience in building web applications
-        using modern web development technologies such as React, Redux, Node.js,
-        and MongoDB. My passion for software development started during my
-        undergraduate studies in computer science, and I have been honing my
-        skills ever since. In my free time, I enjoy working on personal projects
-        and contributing to open source software. I am also an avid hiker and
-        enjoy spending time outdoors.
+        Hello! My name is John and I enjoy becoming a better developer. My interest for software engineer began after I graduated from college and self-taught myself HTML, CSS, and JavaScript. I then enrolled in a full-stack software engineering bootcamp where I learned React and took my web development skills to another level. Currently, I am continuing to work on my bootcamp's capstone project, Soccer Connect, to improve user experiences by adding more functionality! 
       </Typography>
       <Box >
         <Typography

@@ -19,30 +19,38 @@ function Contact() {
   };
 
   return (
-    <Box
-    id="contact" 
-    sx={{
+    <div
+      className="contact-container"
+      id="contact"
+      style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "left",
         minHeight: "100vh",
-        padding: "2rem",
         backgroundColor: "#0e0f1f",
         opacity: showContact ? "1" : "0",
         transition: "opacity 0.5s ease-in-out",
-        marginLeft: "3rem",
+        margin: "0 3rem",
+        justifyContent: "center"
       }}
-      >
+    >
       <Divider
         sx={{ my: 4, borderColor: "#177878", border: "2px solid #177878" }}
       />
-      <Typography variant="h3" sx={{ color: "white" }}>
-        Let's get in touch!
-      </Typography>
-      <Container>
+      <h1 style={{ color: "#FFBB00", marginBottom: '2rem' }}>Let's get in touch!</h1>
+      <span>I'm currently looking for an opportunity as a software developer position on a team that values communication and hard work. If you have any questions, please feel free to reach out and I should respond within a day. Thank you so much!</span>
+      <div className="form-container" method="post">
+          <label htmlFor="name">Name:</label> <br />
+          <input type="text" id="name" name="name" required />
 
-      </Container>
-    </Box>
+          <label htmlFor="email">Email:</label> <br />
+          <input type="email" id="email" name="email" required />
+          
+          <label htmlFor="message">Message:</label> <br />
+          <textarea id="message" name="message" required style={{padding: '15px', width: '100%'}}></textarea>
+          <button type="submit" style={{margin: '1rem auto 0 auto', width: '15%', borderRadius: '8px', padding: '5px 0'}}>Submit</button>
+      </div>
+    </div>
   );
 }
 

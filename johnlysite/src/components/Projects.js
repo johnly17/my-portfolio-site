@@ -60,7 +60,7 @@ function Projects() {
         backgroundColor: "#0e0f1f",
         opacity: showProjects ? "1" : "0",
         transition: "opacity 0.5s ease-in-out",
-        marginLeft: "3rem",
+        marginLeft: "3rem"
       }}
     >
       <Divider
