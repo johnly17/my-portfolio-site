@@ -50,8 +50,8 @@ function About() {
         gutterBottom
       >
         Hello! My name is John and I enjoy becoming a better developer. My
-        interest for software engineer began after I graduated from college and
-        self-taught myself HTML, CSS, and JavaScript. I then enrolled in a
+        interest for software engineering began after I graduated from college and
+        taught myself HTML, CSS, and JavaScript. I then enrolled in a
         full-stack software engineering bootcamp where I learned React and took
         my web development skills to another level. Currently, I am continuing
         to work on my bootcamp's capstone project, Soccer Connect, to improve
