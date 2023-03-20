@@ -68,21 +68,24 @@ function Contact() {
       <div className="form-container">
         <form name="contact" className="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name:
           <br />
           <input type="text" id="name" name="name" required /> 
+          </label>
           <br />
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email:
           <br />
           <input type="email" id="email" name="email" required />
+          </label>
             <br />
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message:
           <textarea
             id="message"
             name="message"
             required
             style={{ padding: "15px", width: "100%" }}
           ></textarea>
+          </label>
           <button
             type="submit"
             style={{
