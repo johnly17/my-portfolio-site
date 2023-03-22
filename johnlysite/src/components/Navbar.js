@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
+import resume from "./images/resume_screenshot.png";
+
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -10,12 +12,17 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
+import Dialog from "@mui/material/Dialog";
 
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
+
+  const openResume = () => setResumeOpen(true);
+  const closeResume = () => setResumeOpen(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -218,9 +225,13 @@ function Navbar() {
                     color: "black",
                   },
                 }}
+                onClick={openResume}
               >
                 Resume
               </Button>
+              <Dialog open={resumeOpen} onClose={closeResume}>
+                <img src={resume} alt='resume' />
+              </Dialog>
             </>
           )}
           <Menu

@@ -1,10 +1,19 @@
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography, Link, Dialog } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import image from "./images/image.jpeg"
+import image from "./images/image.jpeg";
+import resume from "./images/resume_screenshot.png";
+
+import { useState } from 'react';
 
 
 function Landing() {
+
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+ 
   return (
     <Box
       id="/"
@@ -64,6 +73,7 @@ function Landing() {
               padding: "6px",
               fontSize: "11px",
             }}
+            onClick={handleOpen}
           >
             resume
           </Link>
@@ -72,6 +82,7 @@ function Landing() {
       <Box>
         <img src={image} alt="profile pic" style={{width: '350px', height: '400px', borderRadius: '15px'}}/>
       </Box>
+      <Dialog open={open} onClose={handleClose}><img src={resume} alt='resume' /></Dialog>
     </Box>
   );
 };
